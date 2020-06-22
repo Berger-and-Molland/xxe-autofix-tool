@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://kjlubick.github.io/fb-contrib-eclipse/">
+      This is the Eclipse update site for fb-contrib features, which extends FindBugs (tm).
+   </description>
+   <feature url="features/@FEATURE_ID@_@FEATURE_VERSION@.jar" id="@FEATURE_ID@" version="@FEATURE_VERSION@">
+      <category name="fb-contrib-quickfixes"/>
+   </feature>
+   <category-def name="fb-contrib-quickfixes" label="Additional FindBugs QuickFixes">
+      <description>
+         This adds additional quickfix features to FindBugs (tm) for bug patterns, including those provided by fb-contrib.
+      </description>
+   </category-def>
+</site>

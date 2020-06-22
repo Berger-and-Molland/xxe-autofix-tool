@@ -1,0 +1,54 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must ends with two \r.
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+bin/
+bin_build/
+dist/
+zips/
+local.properties
+*.log
+testresources/*.jar
+eclipse/
+eclipse.zip
+output-site/
+output-test-site/
+version.txt
+reports/
+pde_test_port.properties
+TEST-fb-contrib-eclipse-quick-fixes.xml

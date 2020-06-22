@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="@FEATURE_ID@"
+      label="fb-contrib quickfixes feature"
+      version="@FEATURE_VERSION@"
+      provider-name="fb-contrib Project"
+      plugin="@PLUGIN_ID@">
+
+   <description url="http://fb-contrib.sourceforge.net">
+      This feature adds additional quickfixes to the FindBugs Eclipse Plugin for bug patterns listed by fb-contrib.
+   </description>
+
+   <copyright>
+      (c) 2014 Kevin Lubick
+   </copyright>
+
+   <license url="https://github.com/kjlubick/fb-contrib-eclipse-quick-fixes/blob/master/LICENSE">
+      The fb-contrib Eclipse quick-fixes plugin is free software distributed under the terms of the MIT License.
+	  
+	  The MIT License (MIT)
+
+Copyright (c) 2014 Kevin Lubick
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+   </license>
+
+   <url>
+      <update label="fb-contrib Eclipse update site" url="http://dl.bintray.com/kjlubick/fb-contrib-eclipse-quickfixes/"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.core.runtime" version="3.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jdt"/>
+      <import plugin="org.eclipse.jdt.core"/>
+      <import plugin="org.eclipse.jdt.launching"/>
+      <import plugin="org.eclipse.jdt.ui"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.workbench.texteditor"/>
+	  <import plugin="edu.umd.cs.findbugs.plugin.eclipse" version="3.0.1" match="greaterOrEqual" />
+   </requires>
+
+   <plugin
+         id="@PLUGIN_ID@"
+         install-size="580"
+         download-size="620"
+         version="@PLUGIN_VERSION@"/>
+
+</feature>

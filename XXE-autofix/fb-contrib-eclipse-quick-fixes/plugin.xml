@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="edu.umd.cs.findbugs.plugin.eclipse.findbugsQuickFixes">
+      <quickFix
+            class="quickfix.LiteralStringComparisonResolution"
+            label="Swap string variable and string literal"
+            pattern="LSC_LITERAL_STRING_COMPARISON">
+      </quickFix>
+      
+      <quickFix
+      	arguments="isName=false"
+            class="quickfix.CharsetIssuesResolution"
+            label="Replace with StandardCharset.YYY"
+            pattern="CSI_CHAR_SET_ISSUES_USE_STANDARD_CHARSET">
+      </quickFix>
+      
+      <quickFix
+            arguments="isName=true"
+            class="quickfix.CharsetIssuesResolution"
+            label="Replace with StandardCharset.YYY.name()"
+            pattern="CSI_CHAR_SET_ISSUES_USE_STANDARD_CHARSET_NAME">
+      </quickFix>
+      
+      <quickFix
+            class="quickfix.IsNANResolution"
+            label="Replace with YYY"
+            pattern="FE_TEST_IF_EQUAL_TO_NOT_A_NUMBER">
+      </quickFix>
+      
+      <quickFix
+            class="quickfix.IsNANResolution"
+            label="Replace with YYY"
+            pattern="SPP_USE_ISNAN">
+      </quickFix>
+      
+      <quickFix
+      		arguments="useConstructor=false"
+            class="quickfix.BigDecimalConstructorResolution"
+            label="Replace with BigDecimal.valueOf(YYY)"
+            pattern="DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">
+      </quickFix>
+      
+      <quickFix
+      		arguments="useConstructor=true"
+            class="quickfix.BigDecimalConstructorResolution"
+            label="Replace with new BigDecimal(&quot;YYY&quot;)"
+            pattern="DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">
+      </quickFix>
+      
+      <quickFix
+      		arguments="useConstructor=false"
+            class="quickfix.BigDecimalConstructorResolution"
+            label="Replace with BigDecimal.valueOf(double)"
+            pattern="SPP_USE_BIGDECIMAL_STRING_CTOR">
+      </quickFix>
+      
+      <quickFix
+      		arguments="useConstructor=true"
+            class="quickfix.BigDecimalConstructorResolution"
+            label="Replace with new BigDecimal(String)"
+            pattern="SPP_USE_BIGDECIMAL_STRING_CTOR">
+      </quickFix>
+      
+      <quickFix
+      		arguments="replaceAll=false"
+            class="quickfix.SQLOffByOneResolution"
+            label="Change this index to 1 instead of 0"
+            pattern="SQL_BAD_RESULTSET_ACCESS">
+      </quickFix>
+      
+      <quickFix
+      		arguments="replaceAll=true"
+            class="quickfix.SQLOffByOneResolution"
+            label="Increment this and all similar indicies in this block by 1"
+            pattern="SQL_BAD_RESULTSET_ACCESS">
+      </quickFix>
+      
+      <quickFix
+      		arguments="replaceAll=false"
+            class="quickfix.SQLOffByOneResolution"
+            label="Change this index to 1 instead of 0"
+            pattern="SQL_BAD_PREPARED_STATEMENT_ACCESS">
+      </quickFix>
+      
+      <quickFix
+      		arguments="replaceAll=true"
+            class="quickfix.SQLOffByOneResolution"
+            label="Increment this and all similar indicies in this block by 1"
+            pattern="SQL_BAD_PREPARED_STATEMENT_ACCESS">
+      </quickFix>
+      
+      <quickFix
+            class="quickfix.EntrySetResolution"
+            label="Replace with a foreach loop using entrySet()"
+            pattern="WMI_WRONG_MAP_ITERATOR">
+      </quickFix>
+      
+      <quickFix
+      		arguments="useStringBuilder=false"
+            class="quickfix.UseCharacterParameterizedMethodResolution"
+            label="Replace with the char equivalent method call"
+            pattern="UCPM_USE_CHARACTER_PARAMETERIZED_METHOD">
+      </quickFix>
+      
+      <quickFix
+      		arguments="useStringBuilder=true"
+            class="quickfix.UseCharacterParameterizedMethodResolution"
+            label="Use StringBuilder for String concatenation"
+            pattern="UCPM_USE_CHARACTER_PARAMETERIZED_METHOD">
+      </quickFix>
+      
+      <quickFix
+      		arguments="useSecureRandomObject=false"
+            class="quickfix.InsecureRandomResolution"
+            label="Initialize with seed from SecureRandom"
+            pattern="MDM_RANDOM_SEED">
+      </quickFix>
+      
+      <quickFix
+      		arguments="useSecureRandomObject=true"
+            class="quickfix.InsecureRandomResolution"
+            label="Replace using a SecureRandom object"
+            pattern="MDM_RANDOM_SEED">
+      </quickFix>
+      
+      <quickFix
+      		arguments="useSecureRandomObject=true"
+            class="quickfix.InsecureRandomResolution"
+            label="Replace using a SecureRandom object"
+            pattern="PREDICTABLE_RANDOM">
+      </quickFix>
+      
+      <quickFix
+      		arguments="useBooleanConstants=false"
+            class="quickfix.NeedlessBoxingResolution"
+            label="Replace with YYY"
+            pattern="NAB_NEEDLESS_BOXING_PARSE">
+      </quickFix>
+      
+       <quickFix
+       		arguments="useBooleanConstants=true"
+            class="quickfix.NeedlessBoxingResolution"
+            label="Replace with YYY"
+            pattern="NAB_NEEDLESS_BOOLEAN_CONSTANT_CONVERSION">
+      </quickFix>
+      
+      <quickFix
+      		arguments="resolutionType=STORE_TO_SELF"
+            class="quickfix.ReturnValueIgnoreResolution"
+            label="Store result back to self"
+            pattern="RV_RETURN_VALUE_IGNORED">
+	</quickFix>
+	
+	<quickFix
+			arguments="resolutionType=STORE_TO_NEW_LOCAL"
+            class="quickfix.ReturnValueIgnoreResolution"
+            label="Store result to a local"
+            pattern="RV_RETURN_VALUE_IGNORED">
+	</quickFix>
+	
+	<quickFix
+			arguments="resolutionType=WRAP_WITH_IF"
+            class="quickfix.ReturnValueIgnoreResolution"
+            label="Replace with if (YYY) {}"
+            pattern="RV_RETURN_VALUE_IGNORED">
+	</quickFix>
+	
+	<quickFix
+			arguments="resolutionType=WRAP_WITH_NEGATED_IF"
+            class="quickfix.ReturnValueIgnoreResolution"
+            label="Replace with if (!YYY) {}"
+            pattern="RV_RETURN_VALUE_IGNORED">
+	</quickFix>
+	
+	<quickFix
+      		arguments="resolutionType=STORE_TO_SELF"
+            class="quickfix.ReturnValueIgnoreResolution"
+            label="Store result back to self"
+            pattern="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">
+	</quickFix>
+	
+	<quickFix
+			arguments="resolutionType=STORE_TO_NEW_LOCAL"
+            class="quickfix.ReturnValueIgnoreResolution"
+            label="Store result to a local"
+            pattern="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">
+	</quickFix>
+	
+	<quickFix
+			arguments="resolutionType=WRAP_WITH_IF"
+            class="quickfix.ReturnValueIgnoreResolution"
+            label="Replace with if (YYY) {}"
+            pattern="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">
+	</quickFix>
+	
+	<quickFix
+			arguments="resolutionType=WRAP_WITH_NEGATED_IF"
+            class="quickfix.ReturnValueIgnoreResolution"
+            label="Replace with if (!YYY) {}"
+            pattern="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">
+	</quickFix>
+	
+    <quickFix
+            class="quickfix.ArrayToStringResolution"
+            label="Wrap array with Arrays.toString()"
+            pattern="DMI_INVOKING_TOSTRING_ON_ARRAY">
+    </quickFix>
+
+    <quickFix
+            class="quickfix.DeadShadowStoreResolution"
+            label="Prefix assignment to store to field"
+            pattern="DLS_DEAD_LOCAL_STORE_SHADOWS_FIELD">
+    </quickFix>
+    
+    <quickFix
+    		arguments="searchParentClass=true"
+            class="quickfix.DeadShadowStoreResolution"
+            label="Prefix assignment like YYY"
+            pattern="DLS_DEAD_LOCAL_STORE">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.CopyOverridenMethodResolution"
+            label="Delete this method"
+            pattern="COM_COPIED_OVERRIDDEN_METHOD">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.SerializingErrorResolution"
+            label="Add the transient keyword"
+            pattern="SE_BAD_FIELD">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.InefficientToArrayResolution"
+            label="Replace with toArray(YYY)"
+            pattern="ITA_INEFFICIENT_TO_ARRAY">
+    </quickFix>
+   
+   <quickFix
+            class="quickfix.UnnecessaryStoreResolution"
+            label="Remove redundant store and local variable"
+            pattern="USBR_UNNECESSARY_STORE_BEFORE_RETURN">
+    </quickFix>
+    
+    <quickFix
+            arguments="useBreak=false"
+            class="quickfix.SwitchFallThroughResolution"
+            label="Return field YYY before fallthrough"
+            pattern="SF_DEAD_STORE_DUE_TO_SWITCH_FALLTHROUGH">
+    </quickFix>    
+   
+   <quickFix
+   			arguments="useBreak=true"
+            class="quickfix.SwitchFallThroughResolution"
+            label="Add a break after store"
+            pattern="SF_DEAD_STORE_DUE_TO_SWITCH_FALLTHROUGH">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.UseEnumCollectionsResolution"
+            label="Declare YYY"
+            pattern="UEC_USE_ENUM_COLLECTIONS">
+    </quickFix>     
+    
+    <quickFix
+            class="quickfix.ChangeEnumEqualsResolution"
+            label="Replace method call with =="
+            pattern="SPP_EQUALS_ON_ENUM">
+    </quickFix>
+   
+   <quickFix
+            class="quickfix.AddDefaultCaseResolution"
+            label="Add a blank default case"
+            pattern="SF_SWITCH_NO_DEFAULT">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.OverlyConcreteParametersResolution"
+            label="Make parameter more abstract"
+            pattern="OCP_OVERLY_CONCRETE_PARAMETER">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.IsEmptyResolution"
+            label="Replace with a call to isEmpty()"
+            pattern="SPP_USE_ISEMPTY">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.ConvertingStringLiteralsResolution"
+            label="Apply extraneous methods to string literal"
+            pattern="SPP_CONVERSION_OF_STRING_LITERAL">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.UseVarArgsResolution"
+            label="Change last parameter to use varargs (...)"
+            pattern="UVA_USE_VAR_ARGS">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.UseVarArgsResolutionLegacy"
+            label="Change last parameter to use varargs (...)"
+            pattern="UVA_USE_VAR_ARGS">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.LoggerOdditiesResolution"
+            label="Create logger for class Log4jBugs instead"
+            pattern="LO_SUSPECT_LOG_CLASS">
+    </quickFix>
+   
+   <quickFix
+            class="quickfix.ArrayToStringResolution"
+            label="Wrap array with Arrays.toString()"
+            pattern="VA_FORMAT_STRING_BAD_CONVERSION_FROM_ARRAY">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.FormatStringResolution"
+            label="Replace bad format specifier with %s"
+            pattern="VA_FORMAT_STRING_BAD_CONVERSION_TO_BOOLEAN">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.FormatStringResolution"
+            label="Replace bad format specifier with %s"
+            pattern="VA_FORMAT_STRING_BAD_CONVERSION">
+    </quickFix>
+   
+    <quickFix
+            class="quickfix.FormatStringResolution"
+            label="Replace \n with %n"
+            pattern="VA_FORMAT_STRING_USES_NEWLINE">
+    </quickFix>
+    
+    <quickFix
+    		arguments="appendToOrAddFinally=false"
+            class="quickfix.HTTPClientResolution"
+            label="Add call to httpGet.releaseConnection() after YYY block"
+            pattern="HCP_HTTP_REQUEST_RESOURCES_NOT_FREED_LOCAL">
+    </quickFix>
+    
+    <quickFix
+    		arguments="appendToOrAddFinally=true"
+            class="quickfix.HTTPClientResolution"
+            label="YYY"
+            pattern="HCP_HTTP_REQUEST_RESOURCES_NOT_FREED_LOCAL">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.EmptyAbstractResolution"
+            label="Make method abstract"
+            pattern="ACEM_ABSTRACT_CLASS_EMPTY_METHODS">
+    </quickFix>
+   
+   <quickFix
+            class="quickfix.CompareFloatResolution"
+            label="Replace with YYY"
+            pattern="CO_COMPARETO_INCORRECT_FLOATING">
+    </quickFix>
+    
+    <quickFix
+            class="quickfix.UseAssertEqualsResolution"
+            label="Replace with YYY"
+            pattern="JAO_JUNIT_ASSERTION_ODDITIES_USE_ASSERT_EQUALS">
+    </quickFix>
+   	
+   	<quickfix
+   		class="xml.SAXParserResolution"
+   		label="Replace with safe function"
+   		pattern="XXE_SAXPARSER">
+	</quickfix>
+	  
+  	<quickfix
+   		class="xml.DocumentBuilderResolution"
+   		label="Replace with safe function"
+   		pattern="XXE_DOCUMENT">
+	</quickfix>
+	   
+  	<quickfix
+   		class="xml.XMLStreamReaderResolution"
+   		label="Replace with safe function"
+   		pattern="XXE_XMLSTREAMREADER">
+	</quickfix>
+	
+  	<quickfix
+   		class="xml.AbstractInstanceTrackResolution"
+   		label="Replace with safe function"
+   		pattern="XXE_XPATH">
+	</quickfix>
+	
+  	<quickfix
+   		class="xml.XMLReaderResolution"
+   		label="Replace with safe function"
+   		pattern="XXE_XMLREADER">
+	</quickfix>
+	
+  	<quickfix
+   		class="xml.TransformerResolution"
+   		label="Replace with safe function"
+   		pattern="XXE_DTD_TRANSFORM_FACTORY"> <!-- Also xslt for Transformer factory -->
+	</quickfix>
+   </extension>
+
+</plugin>
